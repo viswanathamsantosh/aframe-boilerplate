@@ -2,17 +2,68 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
+    <title>MyPokemonWorld</title>
     <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script> 
+<!--     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script> -->
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+  <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <img id="image1" src="assets/bootstrap.png">
+        <img id="image2" src="assets/html.png">
+        <img id="image3" src="assets/js.jpg">
+        <img id="bg-image" src="panorama-background.jpg">
+      </a-assets>
+      <!-- <a-box color="red" position="0 2 -5" rotation="0 45 45">
+      </a-box> -->
+      <!-- <a-box color="yellow" position="0 2 5" rotation="0 45 45">
+      </a-box> -->
+      <!-- front side -->
+      <!-- <a-plane src="#image1" position="2 2 -5">
+        <a-animation attribute="position" to="2 2.2 -5" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation>
+      </a-plane> -->
+      <!-- wiglypuff -->
+       <a-entity geometry="primitive:plane" position="-2 0.5 -5" material="shader:gif;src:url(https://media.tenor.co/images/23de1f535894b3b564d851702b51aadd/raw);" gif=""></a-entity>
+       <!-- charmander -->
+       <a-entity geometry="primitive:plane" position="2 0.5 0" rotation="0 270 0" material="shader:gif;src:url(https://media.tenor.co/images/dbb71a159aac24687de6ab110160f937/raw);" gif=""></a-entity>
+       <!-- Eevee -->
+       <a-entity geometry="primitive:plane" position="-4 0.5 0" rotation="0 90 0" material="shader:gif;src:url(https://media.tenor.co/images/9dc0fd92ca1efd48553e6da315ea069e/raw);" gif=""></a-entity>
+       <!-- snorlax -->
+       <a-entity geometry="primitive:plane" scale="2 2 2" position="0 0.7 2" rotation="0 180 0" material="shader:gif;src:url(https://media.tenor.co/images/bda662acbfd7d1580620314b5e0f79ad/tenor.gif);" gif=""></a-entity>
+       <!-- psyduck -->
+       <a-entity geometry="primitive:plane" position="3 0.3 -3" rotation="0 0 0"  material="shader:gif;src:url(https://media.tenor.co/images/f6f6b70a05c9ae587c52fec4d7f4a639/raw);" gif=""></a-entity>
+       <!-- pikachu -->
+       <a-entity geometry="primitive:plane" position="3 0.5 2" rotation="0 270 0" rotation="0 90 0" material="shader:gif;src:url(https://media.tenor.co/images/d187327d1ddfd86dc27472b188b7ae72/tenor.gif);" gif=""></a-entity>
+
+      <!-- left side -->
+      <!-- <a-plane src="#image1" position="-4 2 0" rotation="0 90 0">
+        <a-animation attribute="position" to="-4 2.2 0" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation>
+      </a-plane>
+ -->
+      <!-- right side-->
+       <!--      <a-plane src="#image1" position="4 2 0" rotation="0 270 0">
+        <a-animation attribute="position" to="4 2.2 0" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation>
+      </a-plane> -->
+      <!-- back side -->
+<!--             <a-plane src="#image1" position="2 2 5" rotation="180 0 0">
+        <a-animation attribute="position" to="2 2.2 5" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation>
+      </a-plane>
+ -->      <a-camera> 
+        <a-cursor></a-cursor>
+      </a-camera>
+      <!-- <a-plane src="#image1" position="4 2 -5"></a-plane>
+      <a-plane src="#image1" position="6 2 -5"></a-plane>
+      <a-plane src="#image1" position="8 2 -5"></a-plane>
+      <a-plane src="#image2" position="1 2 5"></a-plane> -->
+      <a-plane width="15" height="15" color="#fff" rotation="-90 0 0"></a-plane>
+      <a-sky src="#bg-image"></a-sky>
     </a-scene>
   </body>
 </html>
